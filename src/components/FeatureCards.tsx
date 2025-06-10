@@ -1,4 +1,6 @@
+
 import React from 'react';
+
 interface FeatureCardProps {
   icon: string;
   title: string;
@@ -7,17 +9,10 @@ interface FeatureCardProps {
   linkIcon: string;
   delay: number;
 }
-const FeatureCard: React.FC<FeatureCardProps> = ({
-  icon,
-  title,
-  description,
-  linkText,
-  linkIcon,
-  delay
-}) => {
-  return <div className={`min-w-60 grow shrink w-[302px] animate-fade-in`} style={{
-    animationDelay: `${delay}ms`
-  }}>
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, linkText, linkIcon, delay }) => {
+  return (
+    <div className={`min-w-60 grow shrink w-[302px] animate-fade-in`} style={{ animationDelay: `${delay}ms` }}>
       <div className="flex flex-col items-center aspect-[1] bg-[#220050] pt-6 pb-[152px] px-6 rounded-2xl hover:bg-[#2a0060] transition-all duration-300 hover:scale-105 hover:shadow-lg max-md:pb-[100px] max-md:px-5 group">
         <div className="flex mb-[-30px] h-[188px] w-full flex-col items-stretch max-md:mb-2.5">
           <div className="flex flex-col items-stretch text-[32px] text-[#DAF0FF] justify-center">
@@ -34,16 +29,23 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             <span className="text-[#27CDFE] self-stretch my-auto">
               {linkText}
             </span>
-            <img src={linkIcon} className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto transition-transform duration-300 group-hover:translate-x-1" alt="Link arrow" />
+            <img
+              src={linkIcon}
+              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto transition-transform duration-300 group-hover:translate-x-1"
+              alt="Link arrow"
+            />
           </button>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export const FeatureCards: React.FC = () => {
-  return <section className="w-full bg-[#1B003F] px-32 py-24 max-md:max-w-full max-md:px-5">
+  return (
+    <section className="w-full bg-[#1B003F] px-32 py-24 max-md:max-w-full max-md:px-5">
       <div className="max-w-full w-[1182px] animate-fade-in">
-        <h2 className="text-[#DAF0FF] text-5xl font-medium max-md:max-w-full max-md:text-[10px]">
+        <h2 className="text-[#DAF0FF] text-5xl font-medium max-md:max-w-full max-md:text-[40px]">
           Reimagining Justice for the Digital Age
         </h2>
         <p className="text-[#BECCE5] text-2xl font-normal mt-8 max-md:max-w-full animate-fade-in animation-delay-300">
@@ -54,9 +56,30 @@ export const FeatureCards: React.FC = () => {
       <div className="flex max-w-full w-[1182px] flex-col items-center text-2xl font-normal mt-[65px] max-md:mt-10">
         <div className="w-full max-w-[1182px] max-md:max-w-full">
           <div className="flex gap-6 justify-center flex-wrap">
-            <FeatureCard icon="" title="Decentralized Justice" description="Trustless and transparent, secured by blockchain." linkText="Read our Yellow Paper" linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/b346a8ed3eaa50d6bb3c729c9a4c0dc95d0b04cc?placeholderIfAbsent=true" delay={500} />
-            <FeatureCard icon="" title="Collective Intelligence" description="Cases are ruled by a network of jurors." linkText="Learn how jurors are drawn" linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/90beab299c370de21f33e703264da2c7eb89ccaa?placeholderIfAbsent=true" delay={700} />
-            <FeatureCard icon="" title="Fairness" description="Jurors are incentivized to rule cases honestly." linkText="> $1.2 Mi distributed" linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/db8fffea8c0f8fee4bd0f9d2afddacf5560e9a55?placeholderIfAbsent=true" delay={900} />
+            <FeatureCard
+              icon=""
+              title="Decentralized Justice"
+              description="Trustless and transparent, secured by blockchain."
+              linkText="Read our Yellow Paper"
+              linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/b346a8ed3eaa50d6bb3c729c9a4c0dc95d0b04cc?placeholderIfAbsent=true"
+              delay={500}
+            />
+            <FeatureCard
+              icon=""
+              title="Collective Intelligence"
+              description="Cases are ruled by a network of jurors."
+              linkText="Learn how jurors are drawn"
+              linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/90beab299c370de21f33e703264da2c7eb89ccaa?placeholderIfAbsent=true"
+              delay={700}
+            />
+            <FeatureCard
+              icon=""
+              title="Fairness"
+              description="Jurors are incentivized to rule cases honestly."
+              linkText="> $1.2 Mi distributed"
+              linkIcon="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/db8fffea8c0f8fee4bd0f9d2afddacf5560e9a55?placeholderIfAbsent=true"
+              delay={900}
+            />
           </div>
         </div>
         <div className="flex w-full max-w-[1182px] flex-col items-center text-center mt-12 max-md:max-w-full max-md:mt-10 animate-fade-in animation-delay-1200">
@@ -74,5 +97,6 @@ export const FeatureCards: React.FC = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
