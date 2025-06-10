@@ -86,27 +86,27 @@ export default {
 						height: '0'
 					}
 				},
-				'fadeInUp': {
-					from: {
+				'fade-in': {
+					'0%': {
 						opacity: '0',
 						transform: 'translateY(20px)'
 					},
-					to: {
+					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
-				'slideInRight': {
-					from: {
+				'slide-in-right': {
+					'0%': {
 						opacity: '0',
 						transform: 'translateX(-30px)'
 					},
-					to: {
+					'100%': {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
 				},
-				'pulseGlow': {
+				'pulse-glow': {
 					'0%, 100%': {
 						boxShadow: '0 0 0 0 rgba(39, 205, 254, 0.4)'
 					},
@@ -118,17 +118,34 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fadeInUp 0.8s ease-out forwards',
-				'slide-in-right': 'slideInRight 0.8s ease-out forwards',
-				'pulse-glow': 'pulseGlow 2s ease-in-out infinite'
+				'fade-in': 'fade-in 0.8s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.8s ease-out forwards',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+			},
+			animationDelay: {
+				'200': '200ms',
+				'300': '300ms',
+				'400': '400ms',
+				'500': '500ms',
+				'600': '600ms',
+				'700': '700ms',
+				'800': '800ms',
+				'900': '900ms',
+				'1000': '1000ms',
+				'1100': '1100ms',
+				'1200': '1200ms',
+				'1300': '1300ms',
+				'1500': '1500ms'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 	safelist: [
+		// Animation classes
 		'animate-fade-in',
 		'animate-slide-in-right',
 		'animate-pulse-glow',
+		// Animation delay utilities
 		'animation-delay-200',
 		'animation-delay-300',
 		'animation-delay-400',
@@ -141,7 +158,20 @@ export default {
 		'animation-delay-1100',
 		'animation-delay-1200',
 		'animation-delay-1300',
-		'animation-delay-1500'
+		'animation-delay-1500',
+		// Animation delay with bracket notation
+		'[animation-delay:200ms]',
+		'[animation-delay:300ms]',
+		'[animation-delay:400ms]',
+		'[animation-delay:500ms]',
+		'[animation-delay:600ms]',
+		'[animation-delay:700ms]',
+		'[animation-delay:800ms]',
+		'[animation-delay:900ms]',
+		'[animation-delay:1000ms]',
+		'[animation-delay:1100ms]',
+		'[animation-delay:1200ms]',
+		'[animation-delay:1300ms]',
+		'[animation-delay:1500ms]'
 	]
 } satisfies Config;
-
