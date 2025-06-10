@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,13 +85,63 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fadeInUp': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slideInRight': {
+					from: {
+						opacity: '0',
+						transform: 'translateX(-30px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'pulseGlow': {
+					'0%, 100%': {
+						boxShadow: '0 0 0 0 rgba(39, 205, 254, 0.4)'
+					},
+					'50%': {
+						boxShadow: '0 0 0 20px rgba(39, 205, 254, 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeInUp 0.8s ease-out forwards',
+				'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+				'pulse-glow': 'pulseGlow 2s ease-in-out infinite'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
+	safelist: [
+		'animate-fade-in',
+		'animate-slide-in-right',
+		'animate-pulse-glow',
+		'animation-delay-200',
+		'animation-delay-300',
+		'animation-delay-400',
+		'animation-delay-500',
+		'animation-delay-600',
+		'animation-delay-700',
+		'animation-delay-800',
+		'animation-delay-900',
+		'animation-delay-1000',
+		'animation-delay-1100',
+		'animation-delay-1200',
+		'animation-delay-1300',
+		'animation-delay-1500'
+	]
 } satisfies Config;
+
