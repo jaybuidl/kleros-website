@@ -4,7 +4,7 @@ import { Navigation } from './Navigation';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="w-full font-normal text-center max-md:max-w-full">
+    <section className="w-full font-normal text-left max-md:max-w-full">
       <div className="flex flex-col relative min-h-[835px] w-full items-stretch pb-[371px] bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 max-md:max-w-full max-md:pb-[100px]">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/54fc703b9f8e221023f07d7585c8cd9a6c90e9d0?placeholderIfAbsent=true"
