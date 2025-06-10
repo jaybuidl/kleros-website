@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Navigation: React.FC = () => {
   return (
-    <nav className="relative bg-[rgba(34,0,80,0)] flex w-full flex-col items-center text-base justify-center px-[70px] py-4 max-md:max-w-full max-md:px-5 animate-fade-in">
+    <nav className="relative bg-[rgba(34,0,80,0)] flex w-full flex-col items-center text-base justify-center px-8 py-4 max-md:max-w-full max-md:px-5 animate-fade-in">
       <div className="flex w-full max-w-[1184px] items-stretch gap-5 flex-wrap justify-between max-md:max-w-full">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/dc4722bd4940cf4ee220155eceb32914e72a9469?placeholderIfAbsent=true"
