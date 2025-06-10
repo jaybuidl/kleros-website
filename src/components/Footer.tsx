@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="flex w-full flex-col items-stretch justify-center py-px max-md:max-w-full">
       <div className="bg-[rgba(19,0,45,1)] flex w-full flex-col items-center max-md:max-w-full">
-        <div className="flex text-base text-[#BECCE5] font-normal flex-wrap pt-16 max-md:max-w-full">
+        <div className="flex text-base text-[#BECCE5] font-normal flex-wrap pt-16 px-[70px] w-full max-w-[1180px] justify-between max-md:max-w-full max-md:px-5">
           <FooterColumn
             title="Kleros"
             links={["Earn", "Web3", "Enterprise"]}
