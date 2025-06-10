@@ -141,11 +141,10 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 	safelist: [
-		// Animation classes
+		// Specific animation classes used in HeroSection
 		'animate-fade-in',
 		'animate-slide-in-right',
 		'animate-pulse-glow',
-		// Animation delay utilities
 		'animation-delay-200',
 		'animation-delay-300',
 		'animation-delay-400',
@@ -159,19 +158,12 @@ export default {
 		'animation-delay-1200',
 		'animation-delay-1300',
 		'animation-delay-1500',
-		// Animation delay with bracket notation
-		'[animation-delay:200ms]',
-		'[animation-delay:300ms]',
-		'[animation-delay:400ms]',
-		'[animation-delay:500ms]',
-		'[animation-delay:600ms]',
-		'[animation-delay:700ms]',
-		'[animation-delay:800ms]',
-		'[animation-delay:900ms]',
-		'[animation-delay:1000ms]',
-		'[animation-delay:1100ms]',
-		'[animation-delay:1200ms]',
-		'[animation-delay:1300ms]',
-		'[animation-delay:1500ms]'
+		// Ensure all combinations are preserved
+		{
+			pattern: /animate-(fade-in|slide-in-right|pulse-glow)/,
+		},
+		{
+			pattern: /animation-delay-(200|300|400|500|600|700|800|900|1000|1100|1200|1300|1500)/,
+		}
 	]
 } satisfies Config;

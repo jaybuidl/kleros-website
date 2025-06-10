@@ -15,39 +15,19 @@ export const HeroSection: React.FC = () => {
         <Navigation />
         <div 
           className="relative flex mb-[-74px] flex-col text-white ml-32 mt-32 max-md:max-w-full max-md:mt-10 max-md:mb-2.5 animate-slide-in-right animation-delay-300"
-          style={{
-            animation: 'slide-in-right 0.8s ease-out forwards',
-            animationDelay: '300ms',
-            opacity: 0
-          }}
         >
           <h1 
             className="text-8xl font-medium max-md:max-w-full max-md:text-[40px] animate-fade-in animation-delay-500"
-            style={{
-              animation: 'fade-in 0.8s ease-out forwards',
-              animationDelay: '500ms',
-              opacity: 0
-            }}
           >
             The Justice Protocol
           </h1>
           <p 
             className="text-2xl mt-8 max-md:max-w-full animate-fade-in animation-delay-700"
-            style={{
-              animation: 'fade-in 0.8s ease-out forwards',
-              animationDelay: '700ms',
-              opacity: 0
-            }}
           >
             Decentralized dispute resolution for the new economy.
           </p>
           <div 
             className="flex gap-4 text-base mt-8 max-md:max-w-full animate-fade-in animation-delay-1000"
-            style={{
-              animation: 'fade-in 0.8s ease-out forwards',
-              animationDelay: '1000ms',
-              opacity: 0
-            }}
           >
             <button className="self-stretch min-h-12 gap-2 px-8 py-3.5 rounded-[300px] border-white border-solid border-2 hover:bg-white hover:text-[#1B003F] transition-all duration-300 hover:scale-105 hover:shadow-lg max-md:px-5">
               Solutions for Web3
