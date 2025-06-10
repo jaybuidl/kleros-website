@@ -103,46 +103,17 @@
   }
 }
 
-/* Ensure animations are not purged - using @layer utilities */
+/* Animation utilities with proper initial hidden states */
 @layer utilities {
-  /* Custom keyframes and animations for the website */
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slide-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 0 0 rgba(39, 205, 254, 0.4);
-    }
-    50% {
-      box-shadow: 0 0 0 20px rgba(39, 205, 254, 0);
-    }
-  }
-
-  /* Animation utility classes */
+  /* Animation utility classes with initial hidden states */
   .animate-fade-in {
+    opacity: 0 !important;
     animation: fade-in 0.8s ease-out forwards !important;
   }
 
   .animate-slide-in-right {
+    opacity: 0 !important;
+    transform: translateX(-30px) !important;
     animation: slide-in-right 0.8s ease-out forwards !important;
   }
 
@@ -150,7 +121,7 @@
     animation: pulse-glow 2s ease-in-out infinite !important;
   }
 
-  /* Animation delay utilities */
+  /* Animation delay utilities that maintain hidden state during delay */
   .animation-delay-200 {
     animation-delay: 200ms !important;
   }
