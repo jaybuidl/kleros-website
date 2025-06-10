@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -113,6 +112,14 @@ export default {
 					'50%': {
 						boxShadow: '0 0 0 20px rgba(39, 205, 254, 0)'
 					}
+				},
+				'scroll-left': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-50%)'
+					}
 				}
 			},
 			animation: {
@@ -120,7 +127,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'slide-in-right': 'slide-in-right 0.8s ease-out forwards',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'scroll-left': 'scroll-left 30s linear infinite'
 			},
 			animationDelay: {
 				'200': '200ms',
@@ -141,10 +149,10 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 	safelist: [
-		// Specific animation classes used in HeroSection
 		'animate-fade-in',
 		'animate-slide-in-right',
 		'animate-pulse-glow',
+		'animate-scroll-left',
 		'animation-delay-200',
 		'animation-delay-300',
 		'animation-delay-400',
@@ -158,9 +166,8 @@ export default {
 		'animation-delay-1200',
 		'animation-delay-1300',
 		'animation-delay-1500',
-		// Ensure all combinations are preserved
 		{
-			pattern: /animate-(fade-in|slide-in-right|pulse-glow)/,
+			pattern: /animate-(fade-in|slide-in-right|pulse-glow|scroll-left)/,
 		},
 		{
 			pattern: /animation-delay-(200|300|400|500|600|700|800|900|1000|1100|1200|1300|1500)/,
