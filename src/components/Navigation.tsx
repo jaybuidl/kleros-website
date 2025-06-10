@@ -1,7 +1,7 @@
 import React from 'react';
 export const Navigation: React.FC = () => {
   return <nav className="relative bg-[rgba(34,0,80,0)] flex w-full flex-col items-center text-base justify-center py-4 max-md:max-w-full animate-fade-in">
-      <div className="flex w-full max-w-[1400px] items-stretch gap-5 flex-wrap justify-between max-md:max-w-full px-32 pr-8 max-md:pl-5 max-md:pr-5">
+      <div className="flex w-full items-stretch gap-5 flex-wrap justify-between max-md:max-w-full px-32 pr-8 max-md:pl-5 max-md:pr-5">
         <img src="https://cdn.builder.io/api/v1/image/assets/1b9b30492992499490f097b922f340b2/dc4722bd4940cf4ee220155eceb32914e72a9469?placeholderIfAbsent=true" className="aspect-[3.86] object-contain w-[185px] shrink-0 max-w-full transition-transform duration-300 hover:scale-105" alt="Kleros logo" />
         <div className="flex items-center gap-8 text-white whitespace-nowrap justify-center my-auto max-md:max-w-full">
           <div className="flex flex-col self-stretch relative aspect-[3.05] w-[61px] my-auto">
